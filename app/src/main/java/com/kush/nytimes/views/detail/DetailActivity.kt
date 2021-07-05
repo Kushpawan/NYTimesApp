@@ -32,13 +32,15 @@ class DetailActivity : AppCompatActivity() {
             source.text = this?.source
 
             this?.media?.let {
-                it[0].mediaMetadata?.get(2)?.url?.let { url ->
-                    image1.load(url)
+                if (it.isNotEmpty()) {
+                    it[0].mediaMetadata?.get(2)?.url?.let { url ->
+                        image1.load(url)
+                    }
                 }
             }
 
             more_detail.setOnClickListener {
-                openInCustomTab(this?.url?:"")
+                openInCustomTab(this?.url ?: "")
             }
         }
     }

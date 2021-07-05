@@ -5,7 +5,7 @@ import retrofit2.http.*
 
 interface ApiRepository {
 
-    @GET("viewed/1.json?api-key=UMCu0Ro0mpHCwoCBlG0Wjg5JOGRcGn0a")
+    @GET("viewed/7.json?api-key=UMCu0Ro0mpHCwoCBlG0Wjg5JOGRcGn0a")
     suspend fun getViewedArticlesApi(): ViewArticleResponse
 
 }

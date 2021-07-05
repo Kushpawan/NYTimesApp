@@ -1,4 +1,4 @@
-package com.kush.nytimes.views
+package com.kush.nytimes.views.home
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,8 @@ import com.kush.nytimes.R
 import com.kush.nytimes.extenstions.openActivity
 import com.kush.nytimes.extenstions.showToast
 import com.kush.nytimes.networking.Status
+import com.kush.nytimes.views.adapter.ArticleRecycleAdapter
+import com.kush.nytimes.views.ViewArticles
 import com.kush.nytimes.views.detail.DetailActivity
 import com.kush.nytimes.views.detail.DetailActivity.Companion.EXTRA_DETAIL
 import kotlinx.android.synthetic.main.activity_main.*

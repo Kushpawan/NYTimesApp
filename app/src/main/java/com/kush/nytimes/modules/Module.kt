@@ -5,9 +5,9 @@ import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.kush.nytimes.networking.ApiRepository
-import com.kush.nytimes.views.MainApiRepo
-import com.kush.nytimes.views.MainApiRepoImp
-import com.kush.nytimes.views.MainViewModel
+import com.kush.nytimes.views.home.MainApiRepo
+import com.kush.nytimes.views.home.MainApiRepoImp
+import com.kush.nytimes.views.home.MainViewModel
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import org.koin.android.ext.koin.androidApplication
