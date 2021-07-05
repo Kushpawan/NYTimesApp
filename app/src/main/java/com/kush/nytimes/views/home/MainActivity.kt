@@ -25,13 +25,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //initRecycle()
-
         observeData()
         viewModel.getArticleCall()
     }
 
     private fun observeData() {
+        // observer to observe api response from live data
         viewModel.articlesLiveData.observe(this) { response ->
             when (response.status) {
                 Status.SUCCESS -> response.data?.let {
@@ -39,7 +38,7 @@ class MainActivity : AppCompatActivity() {
                         articles = list
                         initRecycle()
                     } ?: run {
-                        // show no result
+                        // show no result screen
                     }
                 }
                 Status.ERROR -> {
@@ -48,7 +47,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
                 Status.LOADING -> {
-                    // show a loaded here}
+                    // show a loaded here
                 }
             }
         }
@@ -70,6 +69,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun openDetailActivity(viewArticles: ViewArticles?) {
+        // open activity extension function
         openActivity(DetailActivity::class.java) {
             putParcelable(EXTRA_DETAIL, viewArticles)
         }
