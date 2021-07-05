@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">NYTimesApp</string>
+    <string name="created_by">Created by</string>
+    <string name="source">Source</string>
 </resources>
