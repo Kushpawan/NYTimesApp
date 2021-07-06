@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.kush.nytimes.R
-import com.kush.nytimes.views.ViewArticles
+import com.kush.nytimes.views.model.ViewArticles
 import kotlinx.android.synthetic.main.article_item.view.*
 
 class ArticleRecycleAdapter(

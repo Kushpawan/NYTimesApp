@@ -1,4 +1,4 @@
-package com.kush.nytimes.views
+package com.kush.nytimes.views.model
 
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName

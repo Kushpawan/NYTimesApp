@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import com.kush.nytimes.modules.BaseViewModel
 import com.kush.nytimes.networking.Resource
 import com.kush.nytimes.networking.Result
-import com.kush.nytimes.views.ViewArticleResponse
+import com.kush.nytimes.views.model.ViewArticleResponse
 import kotlinx.coroutines.launch
 
 class MainViewModel(private val apis: MainApiRepo, application: Application) :

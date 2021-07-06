@@ -1,6 +1,6 @@
 package com.kush.nytimes.networking
 
-import com.kush.nytimes.views.ViewArticleResponse
+import com.kush.nytimes.views.model.ViewArticleResponse
 import retrofit2.http.*
 
 interface ApiRepository {

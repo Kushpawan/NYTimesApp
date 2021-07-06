@@ -15,6 +15,7 @@ import org.koin.dsl.module
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
+// will define all the viewmodel dependency here
 val viewModelModule = module {
 
     fun provideMainViewModel(
