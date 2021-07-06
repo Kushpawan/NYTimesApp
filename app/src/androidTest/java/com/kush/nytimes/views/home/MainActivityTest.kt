@@ -31,6 +31,8 @@ class MainActivityTest {
 
     @Test
     fun mainActivityTest() {
+        Thread.sleep(1000)
+
         val recyclerView = onView(
             allOf(
                 withId(R.id.article_recycle_view),
@@ -62,44 +64,6 @@ class MainActivityTest {
         )
         materialTextView.perform(click())
 
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        Thread.sleep(700)
-
-        val appCompatImageButton = onView(
-            allOf(
-                withContentDescription("Navigate up"),
-                childAtPosition(
-                    allOf(
-                        withId(R.id.action_bar),
-                        childAtPosition(
-                            withId(R.id.action_bar_container),
-                            0
-                        )
-                    ),
-                    1
-                ),
-                isDisplayed()
-            )
-        )
-        appCompatImageButton.perform(click())
-
-        // Added a sleep statement to match the app's execution delay.
-        // The recommended way to handle such scenarios is to use Espresso idling resources:
-        // https://google.github.io/android-testing-support-library/docs/espresso/idling-resource/index.html
-        Thread.sleep(700)
-
-        val recyclerView2 = onView(
-            allOf(
-                withId(R.id.article_recycle_view),
-                childAtPosition(
-                    withClassName(`is`("androidx.constraintlayout.widget.ConstraintLayout")),
-                    0
-                )
-            )
-        )
-        recyclerView2.perform(actionOnItemAtPosition<ViewHolder>(4, click()))
     }
 
     private fun childAtPosition(
