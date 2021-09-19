@@ -5,8 +5,8 @@ import com.google.gson.FieldNamingPolicy
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
 import com.kush.nytimes.networking.ApiRepository
-import com.kush.nytimes.views.MainApiRepo
-import com.kush.nytimes.views.MainApiRepoImp
+import com.kush.nytimes.views.MainUseCase
+import com.kush.nytimes.views.MainUseCaseImp
 import com.kush.nytimes.views.MainViewModel
 import okhttp3.Cache
 import okhttp3.OkHttpClient
@@ -18,14 +18,14 @@ import retrofit2.converter.gson.GsonConverterFactory
 val viewModelModule = module {
 
     fun provideMainViewModel(
-        apis: MainApiRepo,
+        apis: MainUseCase,
         application: Application
     ): MainViewModel {
         return MainViewModel(apis, application)
     }
 
     single { provideMainViewModel(get(), get()) }
-    single<MainApiRepo> { MainApiRepoImp(get()) }
+    single<MainUseCase> { MainUseCaseImp(get()) }
 }
 
 val apiModule = module {

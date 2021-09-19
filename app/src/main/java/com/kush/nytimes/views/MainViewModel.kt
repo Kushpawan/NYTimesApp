@@ -7,7 +7,7 @@ import com.kush.nytimes.networking.Resource
 import com.kush.nytimes.networking.Result
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val apis: MainApiRepo, application: Application) :
+class MainViewModel(private val apis: MainUseCase, application: Application) :
     BaseViewModel(application) {
 
     var articlesLiveData = MutableLiveData<Resource<ViewArticleResponse>>()

@@ -6,10 +6,10 @@ import com.kush.nytimes.networking.safeApiCall
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 
-class MainApiRepoImp(
+class MainUseCaseImp(
     private val service: ApiRepository,
     private val dispatcher: CoroutineDispatcher = Dispatchers.IO
-) : MainApiRepo {
+) : MainUseCase {
 
     override suspend fun getViewedArticlesCall(): Result<ViewArticleResponse> {
         return safeApiCall(dispatcher) {
